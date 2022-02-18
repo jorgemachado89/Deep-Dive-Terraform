@@ -1,7 +1,7 @@
 #Use the values output by the JuniorAdminIssue.ps1 or junior_admin.sh script
 
-terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table.private[2]" 
-terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table_association.private[2]" 
-terraform import --var-file="terraform.tfvars" "module.vpc.aws_subnet.private[2]" 
-terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table_association.public[2]" 
-terraform import --var-file="terraform.tfvars" "module.vpc.aws_subnet.public[2]" 
+terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table.private[2]" "rtb-07f8b680f3d621ed4"
+terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table_association.private[2]" "subnet-0dab9e59f7ae14148/rtb-07f8b680f3d621ed4"
+terraform import --var-file="terraform.tfvars" "module.vpc.aws_subnet.private[2]" "subnet-0dab9e59f7ae14148"
+terraform import --var-file="terraform.tfvars" "module.vpc.aws_route_table_association.public[2]" "subnet-0965f45af41fc362b/rtb-0bfdff0a4b178aea9"
+terraform import --var-file="terraform.tfvars" "module.vpc.aws_subnet.public[2]" "subnet-0965f45af41fc362b"
